@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration</h1>
+        <p>Create your student account below.</p>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Registration Form</h2>
+            <p>Please fill in your details to register.</p>
+
+            <form action="/register" method="post">
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"
+                       placeholder="Create a password" required>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+
+                    <label class="inline-label">
+                        <input type="radio" name="gender" value="Male" required>
+                        Male
+                    </label>
+
+                    <label class="inline-label">
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+                </fieldset>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="South Africa">South Africa</option>
+                </select>
+
+                <label for="about">About Yourself:</label>
+                <textarea id="about" name="about"
+                          placeholder="Tell us a little about yourself"
+                          rows="4"></textarea>
+
+                <label class="inline-label terms">
+                    <input type="checkbox" name="terms" value="agreed" required>
+                    I agree to the terms and conditions
+                </label>
+
+                <button type="submit">Register</button>
+
+            </form>
+        </section>
+
+        <section class="form-container">
+            <h2>Search Our Website</h2>
+
+            <form action="/search" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section class="form-container">
+            <h2>The Things I have learned</h2>
+
+            <article>
+                <h3>1. What does the action attribute do?</h3>
+                <p>
+                    The action attribute specifies the URL or
+                    destination where the browser sends form data
+                    when the form is submitted.
+                </p>
+            </article>
+
+            <article>
+                <h3>2. What does the method attribute do?</h3>
+                <p>
+                    The method attribute specifies how the browser
+                    submits form data. Common methods include GET
+                    and POST.
+                </p>
+            </article>
+
+            <article>
+                <h3>3. Why is GET commonly useful for a search form?</h3>
+                <p>
+                    GET places submitted search data in the URL's
+                    query string, making search URLs easy to
+                    bookmark, copy and share.
+                </p>
+            </article>
+
+            <article>
+                <h3>4. Why might POST be used for a registration form?</h3>
+                <p>
+                    POST sends form data in the request body and
+                    is commonly used when submitting information
+                    that creates or updates data on a server.
+                </p>
+            </article>
+
+            <article>
+                <h3>5. Does using POST automatically make information secure?</h3>
+                <p>
+                    No. POST does not automatically encrypt
+                    information. HTTPS and secure server-side
+                    handling are needed to protect sensitive data.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Registration Page</p>
+    </footer>
+
+</body>
+</html>
